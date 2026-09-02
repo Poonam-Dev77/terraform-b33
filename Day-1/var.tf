@@ -7,7 +7,7 @@ variable "ami" {
   }
 
   variable "key_name" {
-    default = "ohio_key"
+    default = "ohio-key"
   }
 
   variable "volume_size" {
