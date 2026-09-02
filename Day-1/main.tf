@@ -39,7 +39,7 @@ resource "aws_instance" "ec2" {
    key_name      = var.key_name
    vpc_security_group_ids = [aws_security_group.sg.id]
 
-   user_data = file("/root/terraform-b33/day-1/user_data.sh")
+   user_data = file("root/terraform-b33/Day-1/user_data.sh")
 
    root_block_device {
        volume_size = var.volume_size
@@ -47,6 +47,6 @@ resource "aws_instance" "ec2" {
    }
 
    tags = {
-      Name = "my_ec2"
+      Name = "ec2"
    }
-}
+   }
