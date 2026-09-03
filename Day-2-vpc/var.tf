@@ -27,7 +27,7 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-    default = "abhi"
+    default = "ohio-key"
 }
 
 variable "volume_size" {
