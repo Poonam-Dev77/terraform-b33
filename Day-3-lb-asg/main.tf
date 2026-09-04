@@ -58,7 +58,7 @@ resource "aws_launch_template" "lt" {
     image_id = "ami-02159ad7e38d562f2"
     key_name = "ohio-key"
     instance_type = "t3.micro"
-    security_group_names = [aws_security_group.sg.id]
+    vpc_security_group_ids = [aws_security_group.sg.id]
     user_data = file("/root/terraform-b33/Day-3-lb-asg/user_data.sh")
 }
 
@@ -67,6 +67,7 @@ resource "aws_autoscaling_group" "asg" {
     max_size = 10
     min_size = 2
     desired_capacity = 2
+    target_group_arns = [aws_lb_target_group.target_group.arn]
     vpc_zone_identifier = ["subnet-0a151ea1a71c189a3","subnet-079fd2f3e2a4e50de"]
     launch_template {
         id = aws_launch_template.lt.id
