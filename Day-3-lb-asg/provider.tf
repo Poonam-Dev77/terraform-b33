@@ -1,0 +1,4 @@
+provider "asw" {
+    region = "ap-southeast-1"
+    profile = "dev"
+}
