@@ -70,7 +70,7 @@ resource "aws_launch_template" "lt" {
     key_name = "ohio-key"
     instance_type = "t3.micro"
     vpc_security_group_ids = [aws_security_group.sg.id]
-    user_data = file("/root/terraform-b33/Day-3-lb-asg/user_data.sh")
+    user_data = filebase64("/root/terraform-b33/Day-3-lb-asg/user_data.sh")
 }
 
 resource "aws_autoscaling_group" "asg" {
