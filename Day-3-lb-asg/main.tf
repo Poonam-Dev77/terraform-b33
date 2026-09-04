@@ -1,5 +1,5 @@
 data "aws_vpc" "default" {
-    default = false
+    default = true
 }
 
 #CREATION OF SECURITY GROUPS
