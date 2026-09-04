@@ -48,7 +48,7 @@ resource "aws_lb_listener" "lb_listener" {
     protocol = "HTTP"
     default_action {
         type = "forward"
-        target_group_arn = aws_lb_target_group.target_group.arn
+        target_group_arn = aws_lb_target_group.tg.arn
     }
 }
 
@@ -67,7 +67,7 @@ resource "aws_autoscaling_group" "asg" {
     max_size = 10
     min_size = 2
     desired_capacity = 2
-    target_group_arns = [aws_lb_target_group.target_group.arn]
+    target_group_arns = [aws_lb_target_group.tg.arn]
     vpc_zone_identifier = ["subnet-0a151ea1a71c189a3","subnet-079fd2f3e2a4e50de"]
     launch_template {
         id = aws_launch_template.lt.id
