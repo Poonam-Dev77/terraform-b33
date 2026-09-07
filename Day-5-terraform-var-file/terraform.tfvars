@@ -1,0 +1,11 @@
+vpc_cidr = "10.0.0.0/16"
+private_subnet_cidr = "10.0.1.0/24"
+public_subnet_cidr = "10.0.2.0/24"
+private_az = "ap-southeast-1b"
+public_az = "ap-southeast-1a"
+sg_name = "my-sg"
+http_port = 80
+ssh_port = 22
+ami = "ami-02159ad7e38d562f2"
+instance_type = "t3.micro"
+key_name = "ohio-key"
