@@ -3,7 +3,7 @@ resource "aws_instance" "ec2" {
     ami                        = "ami-0c6b3b583f6e55a2f"
     key_name                   = "ohio-key"
     count                      = 2
-    vpc_security_group_ids     = ["sg-07b0f9fabefeaea2c"]
+    vpc_security_group_ids     = ["sg-0c447262392a165d4"]
 
     provisioner "file" {
         source    = "hello.txt"
