@@ -1,4 +1,4 @@
-resource "aws_instance" "example" {
+resource "aws_instance" "ec2" {
     instance_type              = "t3.micro"
     ami                        = "ami-0c6b3b583f6e55a2f"
     key_name                   = "ohio-key"
