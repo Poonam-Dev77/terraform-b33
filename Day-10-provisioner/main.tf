@@ -11,7 +11,7 @@ resource "aws_instance" "example" {
   }
 
   provisioner "local-exec" {
-    command = "echo ${self.private.ip} >> private_ips.txt"
+    command = "echo ${self.private_ip} >> private_ips.txt"
   }
 
   connection {
