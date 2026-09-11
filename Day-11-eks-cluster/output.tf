@@ -1,5 +1,5 @@
-output = "cluster_name" {
-    value = aws_eks_cluster.myscluster.name
+output "cluster_name" { // Output for cluster name
+  value = aws_eks_cluster.mycluster.name 
 }
 
 output "cluster_endpoint" {
